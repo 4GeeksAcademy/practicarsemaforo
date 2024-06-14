@@ -1,36 +1,19 @@
-// import React, { useState, } from 'react';
-
-
-// const Semaforo = () => {
-//     const [light, setLight] = useState('red');
-
-//     return (
-//         <div className="traffic-light">
-//             <div className={`light red ${light === 'red' ? 'active' : ''}`}></div>
-//             <div className={`light yellow ${light === 'yellow' ? 'active' : ''}`}></div>
-//             <div className={`light green ${light === 'green' ? 'active' : ''}`}></div>
-//         </div>
-//     );
-// };
-
-// export default Semaforo;
-
-
-import React, { useState } from 'react';
+import React, { useState, } from 'react';
 
 const Semaforo = () => {
-    const [luz, setLuz] = useState('');
-
+    
+    const [color, setColor] = useState("");
 
     return (
-        
-       <div className="semaforo">
-            <div onClick={()=>setSelectColor("green")}className={"light green " + ((selectColor==="green")? "glow":"")}></div>
-       </div>
-      
+        <div className="semaforo">
+            <div onClick={()=>setColor("verde")}   className={"faro verde " + ((color==="verde") ? "encendido":"") }></div>
+            <div onClick={()=>setColor("naranja")} className={"faro naranja " + ((color==="naranja") ? "encendido": "")}></div>
+            <div onClick={()=>setColor("rojo")}     className={"faro rojo " + ((color==="rojo,") ? "encendido": "")}></div>
 
-    )
-}
+        </div>            
+                                                                                                                   
+    );
+};
 
 export default Semaforo;
 
